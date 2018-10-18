@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Real Time Code Editor </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script>
+            function refresh(){
+                var textContent = document.getElementById('editor-textarea').value;
+                document.getElementById('viewer').srcdoc = textContent;
+
+            }
+            
+        </script>
+        
+         <style>
+            
+            *{
+                padding: 0;
+                margin: 0;
+            }
+        .main{
+            background: #82d6ba;
+            width: 100%;
+            height: 100%;
+            display: inline-flex;
+        }
+        #editor-textarea{
+            background:white;
+            
+            width: 100%;
+            height: 95%;
+            margin: 10px;
+            padding: 6px;
+
+        }
+        #viewer
+        {
+          background: white;
+          border: none;
+          width: 100%;
+          height: 95%;
+          margin: 10px;
+          border: 2px solid #a4dfee;
+        }
+        </style>
+    </head>
+
+<body>
+        <div class="pos-f-t">
+                <div class="collapse" id="navbarToggleExternalContent">
+                  <div class="bg-dark p-4">
+                    <h5 class="text-white h4">CODE-PAD</h5>
+                    <span class="text-white">A real time editor for HTML + CSS +JAVASCRIPT + jquery.</span><br/>
+                    <span class="text-white">Develop By Siddharth.</span>
+                  </div>
+                </div>
+                <nav class="navbar navbar-dark bg-dark">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </nav>
+              </div>
+    <h2 class="text-center text-info">CODE-PAD</h2>
+
+<div class="main">
+    <textarea  type="text"class="form-control" id="editor-textarea" onkeyup="refresh()" placeholder="... Please Code Here..."></textarea>
+    <iframe class="form-control" id="viewer"></iframe>
+    </div>
+
+
+
+</body>
+</html>
